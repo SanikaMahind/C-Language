@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+    int num = 1;
+    int arr[100];
+    int index = 0;
+
+   
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            arr[index++] = num++;
+        }
+    }
+
+    
+    index = 0;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", arr[index++]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
