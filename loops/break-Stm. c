@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    printf("Demonstration of break and continue statements:\n");
+
+    for (i = 1; i <= 10; i++) {
+
+       
+        if (i == 5) {
+            printf("Skipping number 5 using continue...\n");
+            continue;  
+        }
+
+       
+        if (i == 8) {
+            printf("Number 8 reached! Breaking the loop...\n");
+            break;     
+        }
+
+        printf("Number: %d\n", i);
+    }
+
+    printf("Program ended.\n");
+
+    return 0;
+}
