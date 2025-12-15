@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int password = 4321;
+    int input;
+    int attempts = 3;
+
+    do {
+        printf("Enter password: ");
+        scanf("%d", &input);
+
+        if (input == password) {
+            printf("Access Granted!\n");
+            break;
+        } else {
+            attempts--;
+            printf("Wrong password! Attempts left: %d\n", attempts);
+        }
+
+    } while (attempts > 0);
+
+    if (attempts == 0) {
+        printf("Account Locked!\n");
+    }
+
+    return 0;
+}
