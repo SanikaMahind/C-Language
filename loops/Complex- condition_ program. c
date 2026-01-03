@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float marks;
+    char attendance;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter marks (out of 100): ");
+    scanf("%f", &marks);
+
+    printf("Attendance above 75%%? (Y/N): ");
+    scanf(" %c", &attendance);
+
+    if (age >= 18 && age <= 25) {
+        if (marks >= 40 && (attendance == 'Y' || attendance == 'y')) {
+
+            if (marks >= 90)
+                printf("Grade: A+ | Eligible for Scholarship\n");
+            else if (marks >= 75)
+                printf("Grade: A | Eligible for Scholarship\n");
+            else if (marks >= 60)
+                printf("Grade: B | No Scholarship\n");
+            else
+                printf("Grade: C | No Scholarship\n");
+
+        } else if (marks < 40 && (attendance == 'Y' || attendance == 'y')) {
+            printf("Fail due to low marks\n");
+        } else {
+            printf("Fail due to low attendance\n");
+        }
+    } else {
+        printf("Age not eligible for this program\n");
+    }
+
+    return 0;
+}
